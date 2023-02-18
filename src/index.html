@@ -6,6 +6,96 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        console.log(mobileMenuIcon);
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open");
+          } else {
+            mobileMenuIcon.classList.add("open");
+          }
+        });
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header class="text-zinc-300">
+      <main class="sticky top-0">
+        <nav
+          class="flex items-center bg-gradient-to-r from-pink-600 to-rose-500"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
+            <p class="text-2xl font-bold">
+              tw:<span class="text-sky-800">bc</span>
+            </p>
+          </div>
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <div id="mobile-menu-button" class="group">
+              <div
+                class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
+              ></div>
+              <div
+                class="opacity-1 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:opacity-0"
+              ></div>
+              <div
+                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
+              ></div>
+              <div
+                class="absolute top-[62px] w-full bg-gradient-to-r from-pink-500 to-red-500 peer-open:block"
+              >
+                <div class="text-center transition-all hover:bg-white/10">
+                  <span class="cursor-pointer">home</span>
+                </div>
+                <div class="text-center transition-all hover:bg-white/10">
+                  <span class="cursor-pointer">line up</span>
+                </div>
+                <div class="text-center transition-all hover:bg-white/10">
+                  <span class="cursor-pointer">tickets</span>
+                </div>
+                <div class="text-center transition-all hover:bg-white/10">
+                  <span class="cursor-pointer">support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden flex-1 items-center justify-end md:flex">
+            <div
+              class="hover:text-zink-100 relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/10"
+            >
+              <span>home</span>
+            </div>
+            <div
+              class="hover:text-zink-100 relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/10"
+            >
+              <span>lineup</span>
+            </div>
+            <div
+              class="hover:text-zink-100 group relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/10"
+            >
+              <span>tickets</span>
+              <div
+                class="hover:text-zink-100 absolute top-full right-0 hidden whitespace-nowrap rounded-b-md bg-rose-500 text-center text-sm text-pink-100 transition-colors ease-in-out group-hover:block"
+              >
+                <div class="p-4 font-bold hover:bg-white/10">
+                  <span> 1 day ticket </span>
+                </div>
+                <div class="rounded-b-md p-4 font-bold hover:bg-white/10">
+                  <span> 7 day ticket </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hover:text-zink-100 relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/10"
+            >
+              <span>support</span>
+            </div>
+          </div>
+        </nav>
+      </main>
+    </header>
+  </body>
 </html>
