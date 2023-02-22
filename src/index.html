@@ -9,7 +9,6 @@
     <script>
       window.onload = () => {
         const mobileMenuIcon = document.getElementById("mobile-menu-button");
-        console.log(mobileMenuIcon);
         mobileMenuIcon.addEventListener("click", () => {
           if (mobileMenuIcon.classList.contains("open")) {
             mobileMenuIcon.classList.remove("open");
@@ -29,7 +28,7 @@
           <div class="flex items-center gap-2 p-2">
             <img src="./assets/images/logo-inverted.png" width="50" />
             <p class="text-2xl font-bold">
-              tw:<span class="text-sky-800">bc</span>
+              tw:<span class="text-sky-900">bc</span>
             </p>
           </div>
           <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
@@ -97,8 +96,41 @@
         </nav>
         <div
           style="background-image: url(../src/assets/images/hero.jpg)"
-          class="flex h-[calc(100vh-200px)] flex-col bg-cover bg-fixed bg-center"
-        ></div>
+          class="relative flex h-[calc(100vh-200px)] min-h-[400px] items-center justify-center bg-cover bg-fixed bg-center"
+        >
+          <div
+            class="absolute flex flex-col items-center justify-center rounded-xl bg-white/30 text-4xl font-bold backdrop-blur-sm"
+          >
+            <img
+              src="../src/assets/images/logo.png"
+              alt="logo"
+              width="175"
+              class="m-1"
+            />
+            <div class="flex">
+              <div
+                class="mt-[-74px] flex h-14 w-14 items-center justify-center gap-1 rounded-full bg-pink-500"
+              >
+                <div
+                  class="h-2 w-1 animate-wavey rounded-full bg-pink-300 animation-delay-100"
+                ></div>
+                <div
+                  class="h-3 w-1 animate-wavey rounded-full bg-pink-200 animation-delay-200"
+                ></div>
+                <div
+                  class="h-4 w-1 animate-wavey rounded-full bg-pink-100 animation-delay-[150ms]"
+                ></div>
+                <div
+                  class="h-3 w-1 animate-wavey rounded-full bg-pink-200 animation-delay-[50ms]"
+                ></div>
+                <div
+                  class="h-2 w-1 animate-wavey rounded-full bg-pink-300 animation-delay-200"
+                ></div>
+              </div>
+            </div>
+            <p>tw<span class="text-sky-900">:bc</span></p>
+          </div>
+        </div>
       </main>
     </header>
   </body>
