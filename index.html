@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open");
+          } else {
+            mobileMenuIcon.classList.add("open");
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <header class="text-zinc-300">
+      <main class="sticky top-0">
+        <nav
+          class="flex items-center bg-gradient-to-r from-pink-600 to-rose-500"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
+            <p class="text-2xl font-bold">
+              tw:<span class="text-sky-900">bc</span>
+            </p>
+          </div>
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <div id="mobile-menu-button" class="group">
+              <div
+                class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
+              ></div>
+              <div
+                class="opacity-1 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:opacity-0"
+              ></div>
+              <div
+                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
+              ></div>
+              <div
+                class="absolute left-0 top-[62px] w-full bg-gradient-to-r from-pink-500 to-red-500 group-open:hidden peer-open:block"
+              >
+                <div class="text-center transition-all hover:bg-white/20">
+                  <span class="cursor-pointer">home</span>
+                </div>
+                <div class="text-center transition-all hover:bg-white/20">
+                  <span class="cursor-pointer">line up</span>
+                </div>
+                <div class="text-center transition-all hover:bg-white/20">
+                  <span class="cursor-pointer">tickets</span>
+                </div>
+                <div class="text-center transition-all hover:bg-white/20">
+                  <span class="cursor-pointer">support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden flex-1 items-center justify-end md:flex">
+            <div
+              class="hover:text-zink-100 relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/20"
+            >
+              <span>home</span>
+            </div>
+            <div
+              class="hover:text-zink-100 relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/20"
+            >
+              <span>lineup</span>
+            </div>
+            <div
+              class="hover:text-zink-100 group relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/20"
+            >
+              <span>tickets</span>
+              <div
+                class="hover:text-zink-100 absolute top-full right-0 hidden whitespace-nowrap rounded-b-md bg-rose-500 text-center text-sm text-pink-100 transition-colors ease-in-out group-hover:block"
+              >
+                <div class="p-4 font-bold hover:bg-white/20">
+                  <span> 1 day ticket </span>
+                </div>
+                <div class="rounded-b-md p-4 font-bold hover:bg-white/20">
+                  <span> 7 day ticket </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hover:text-zink-100 relative flex h-full cursor-pointer p-4 text-2xl font-bold text-pink-100 transition-colors ease-in-out hover:bg-white/20"
+            >
+              <span>support</span>
+            </div>
+          </div>
+        </nav>
+        <div
+          style="background-image: url(../src/assets/images/hero.jpg)"
+          class="relative flex h-[calc(100vh-200px)] min-h-[400px] items-center justify-center bg-cover bg-fixed bg-center"
+        >
+          <div
+            class="absolute flex flex-col items-center justify-center rounded-xl bg-white/30 text-4xl font-bold backdrop-blur-sm"
+          >
+            <img
+              src="../src/assets/images/logo.png"
+              alt="logo"
+              width="175"
+              class="m-1"
+            />
+            <div class="flex">
+              <div
+                class="mt-[-74px] flex h-14 w-14 items-center justify-center gap-1 rounded-full bg-pink-500"
+              >
+                <div
+                  class="h-2 w-1 animate-wavey rounded-full bg-pink-300 animation-delay-100"
+                ></div>
+                <div
+                  class="h-3 w-1 animate-wavey rounded-full bg-pink-200 animation-delay-200"
+                ></div>
+                <div
+                  class="h-4 w-1 animate-wavey rounded-full bg-pink-100 animation-delay-[150ms]"
+                ></div>
+                <div
+                  class="h-3 w-1 animate-wavey rounded-full bg-pink-200 animation-delay-[50ms]"
+                ></div>
+                <div
+                  class="h-2 w-1 animate-wavey rounded-full bg-pink-300 animation-delay-200"
+                ></div>
+              </div>
+            </div>
+            <p>tw<span class="text-sky-900">:bc</span></p>
+          </div>
+        </div>
+      </main>
+    </header>
+  </body>
+</html>
